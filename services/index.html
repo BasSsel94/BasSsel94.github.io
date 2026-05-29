@@ -1,139 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services & Expertise | Basel Kattae</title>
-    <link rel="stylesheet" href="../style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Basel Kattae</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<!-- Layout Ratio & Watermark Visibility Overrides -->
+<style>
+  /* Enhance background page watermark readability */
+  .page-watermark {
+    color: rgba(255, 255, 255, 0.07) !important; /* Slightly whiter/more visible */
+    pointer-events: none;
+  }
+
+  /* Responsive Fixes for Even Mobile Display Ratios */
+  @media (max-width: 900px) {
+    .services-hero h1 {
+      font-size: 42px !important;
+    }
+    .services-grid {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 20px !important;
+    }
+  }
+
+  @media (max-width: 600px) {
+    nav {
+      padding: 0 16px !important;
+    }
+    .nav-links {
+      gap: 8px !important;
+    }
+    .nav-btn {
+      padding: 6px 10px !important;
+      font-size: 12px !important;
+    }
+    .nav-cta {
+      display: none !important; /* Prevents button crowding on tiny screens */
+    }
+    .services-hero {
+      padding: 0 16px !important;
+      text-align: center !important;
+    }
+    .services-hero h1 {
+      font-size: 32px !important;
+    }
+    .category-nav {
+      flex-direction: column !important;
+      gap: 8px !important;
+      padding: 0 16px !important;
+    }
+    .cat-btn {
+      width: 100% !important;
+      text-align: center !important;
+    }
+    .services-section {
+      padding: 40px 16px !important;
+    }
+    .services-section-title {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 12px !important;
+    }
+    .services-grid {
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+    .services-cta-strip {
+      flex-direction: column !important;
+      gap: 24px !important;
+      text-align: center !important;
+      padding: 40px 16px !important;
+    }
+    .services-cta-btn {
+      width: 100% !important;
+      text-align: center !important;
+    }
+  }
+</style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo"><a href="../index.html">My Services</a></div>
-        <ul>
-            <li><a href="../index.html">CV</a></li>
-            <li><a href="index.html" class="active">Services</a></li>
-            <li><a href="../blog/index.html">Blog</a></li>
-        </ul>
-    </nav>
+<nav>
+  <a class="nav-logo" href="index.html">Basel<span>.</span></a>
+  <div class="nav-links">
+    <a class="nav-btn" href="index.html">Resume</a>
+    <a class="nav-btn active" href="services.html">Services</a>
+    <a class="nav-btn" href="blog.html">Blog</a>
+  </div>
+  <a class="nav-cta" href="mailto:basel.mech@gmail.com">Get in Touch</a>
+</nav>
 
-    <main class="container">
-        <h1>Services & Expert Capabilities</h1>
-        <p style="margin-bottom: 3rem;">Strategic conformity, auditing, and educational solutions designed to streamline international market access and ensure complete compliance alignment.</p>
+<div class="watermark-container">
+  <div class="page-watermark" style="top: 60px;">Services</div>
 
-        <!-- Category 1: Regulatory & Certification Services -->
-        <section>
-            <h2>Regulatory & Certification Services</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>SABER Certification Consulting</h3>
-                    <p>Helping manufacturers and importers obtain SABER certificates for products entering the Saudi market.</p>
-                </div>
-                <div class="card">
-                    <h3>SASO Compliance Assessment</h3>
-                    <p>Evaluating products against Saudi technical regulations and applicable standards before market entry.</p>
-                </div>
-                <div class="card">
-                    <h3>IECEE Recognition Support</h3>
-                    <p>Assisting companies with IECEE certificate recognition and Saudi compliance procedures.</p>
-                </div>
-                <div class="card">
-                    <h3>SQM (Saudi Quality Mark) Consulting</h3>
-                    <p>Supporting factories in preparing for Saudi Quality Mark certification and audits.</p>
-                </div>
-                <div class="card">
-                    <h3>G-Mark Certification Support</h3>
-                    <p>Providing conformity guidance for low-voltage electrical products under Gulf G-Mark requirements.</p>
-                </div>
-                <div class="card">
-                    <h3>UAE MOIAT Certification Services</h3>
-                    <p>Managing product conformity and certification procedures for UAE market access.</p>
-                </div>
-                <div class="card">
-                    <h3>SFDA Regulations Support</h3>
-                    <p> Helping with SFDA Certification required products </p>
-                </div>
-                <div class="card">
-                    <h3>Product Compliance Verification</h3>
-                    <p>Reviewing products, labels, reports, and technical files before submission to authorities.</p>
-                </div>
-                <div class="card">
-                    <h3>Technical Regulation Interpretation</h3>
-                    <p>Helping businesses understand Saudi, Gulf, and international compliance requirements in simple actionable terms.</p>
-                </div>
-            </div>
-        </section>
+  <div class="services-hero scroll-reveal" style="margin-top: var(--nav-h);">
+    <h1>Expert Services<br><span>Built on Precision</span></h1>
+    <p>From regulatory certification to hands-on auditing and team training — comprehensive compliance expertise to get your products to market safely and efficiently.</p>
+  </div>
+</div>
 
-        <!-- Category 2: Inspection & Audit Services -->
-        <section>
-            <h2>Inspection & Audit Services</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>ISO/IEC 17020 Inspection Services</h3>
-                    <p>Conducting independent inspections for products, shipments, and manufacturing compliance activities.</p>
-                </div>
-                <div class="card">
-                    <h3>Factory Inspection Coordination</h3>
-                    <p>Preparing factories for audits, inspections, and certification body assessments.</p>
-                </div>
-                <div class="card">
-                    <h3>Pre-Shipment Inspection</h3>
-                    <p>Inspecting goods before export to ensure compliance with customer and regulatory requirements.</p>
-                </div>
-                <div class="card">
-                    <h3>Supplier Compliance Evaluation</h3>
-                    <p>Assessing supplier capabilities, quality systems, and regulatory readiness.</p>
-                </div>
-                <div class="card">
-                    <h3>Internal Audit Services</h3>
-                    <p>Performing internal audits based on ISO standards and certification requirements.</p>
-                </div>
-                <div class="card">
-                    <h3>ISO 9001 Lead Auditing</h3>
-                    <p>Conducting quality management system audits and compliance assessments.</p>
-                </div>
-                <div class="card">
-                    <h3>Risk-Based Audit Consulting</h3>
-                    <p>Helping companies implement risk-based auditing methods according to ISO 19011 principles.</p>
-                </div>
-                <div class="card">
-                    <h3>Technical Documentation Audit</h3>
-                    <p>Reviewing certification files, test reports, declarations, and quality records for compliance gaps.</p>
-                </div>
-            </div>
-        </section>
+<div class="category-nav scroll-reveal">
+  <button class="cat-btn active" onclick="scrollToSection('regulatory')">Regulatory &amp; Certification</button>
+  <button class="cat-btn" onclick="scrollToSection('inspection')">Inspection &amp; Audit</button>
+  <button class="cat-btn" onclick="scrollToSection('strategy')">Strategy &amp; Training</button>
+</div>
 
-        <!-- Category 3: Training & Educational Services -->
-        <section>
-            <h2>Training & Educational Services</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>ISO Standards Training</h3>
-                    <p>Training teams on ISO systems, auditing principles, and compliance practices.</p>
-                </div>
-                <div class="card">
-                    <h3>SABER System Training</h3>
-                    <p>Teaching importers and manufacturers how to use the SABER platform effectively.</p>
-                </div>
-                <div class="card">
-                    <h3>Compliance Awareness Workshops</h3>
-                    <p>Providing practical workshops about Saudi and Gulf regulatory requirements.</p>
-                </div>
-                <div class="card">
-                    <h3>Technical Team Coaching</h3>
-                    <p>Training junior conformity engineers and compliance staff.</p>
-                </div>
-                <div class="card">
-                    <h3>Audit Preparation Training</h3>
-                    <p>Preparing companies and employees for certification audits and inspections.</p>
-                </div>
-                <div class="card">
-                    <h3>Regulatory Documentation Training</h3>
-                    <p>Teaching proper preparation of declarations, test reports, and technical files.</p>
-                </div>
-            </div>
-        </section>
-    </main>
+<div id="regulatory" class="services-section scroll-reveal">
+  <div class="services-section-title">
+    <div class="cat-icon">🏛️</div>
+    <div>
+      <div class="cat-title-text">Regulatory &amp; Certification Services</div>
+      <div class="cat-sub">Saudi, Gulf &amp; UAE market access</div>
+    </div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card scroll-reveal">
+      <div class="service-card-num">01 / REG</div>
+      <div class="service-card-name">SABER Certification Consulting</div>
+      <p class="service-card-desc">End-to-end guidance for manufacturers and importers to successfully register products, navigate technical regulations, and secure certificates on the Saudi SABER platform.</p>
+    </div>
+    <div class="service-card scroll-reveal delay-1">
+      <div class="service-card-num">02 / REG</div>
+      <div class="service-card-name">SASO Compliance Assessment</div>
+      <p class="service-card-desc">Comprehensive evaluation of your products against Saudi Arabian Standards Organization (SASO) technical regulations to identify and bridge compliance gaps before customs entry.</p>
+    </div>
+    <div class="service-card scroll-reveal">
+      <div class="service-card-num">03 / REG</div>
+      <div class="service-card-name">G-Mark Certification (Gulf Countries)</div>
+      <p class="service-card-desc">Expert conformity verification for low-voltage electrical equipment and children's toys entering the Gulf region, fully ensuring alignment with GSO technical regulations.</p>
+    </div>
+    <div class="service-card scroll-reveal delay-1">
+      <div class="service-card-num">04 / REG</div>
+      <div class="service-card-name">UAE / MoIAT Market Access</div>
+      <p class="service-card-desc">Navigating the regulatory framework for the United Arab Emirates market, helping your business secure mandatory product registrations and compliance approvals through MoIAT.</p>
+    </div>
+  </div>
+</div>
 
+<div id="inspection" class="services-section scroll-reveal">
+  <div class="services-section-title">
+    <div class="cat-icon">🔍</div>
+    <div>
+      <div class="cat-title-text">Inspection &amp; Audit Services</div>
+      <div class="cat-sub">Quality assurance and risk verification</div>
+    </div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card scroll-reveal">
+      <div class="service-card-num">01 / AUD</div>
+      <div class="service-card-name">ISO 17020 Shipment Inspections</div>
+      <p class="service-card-desc">Conducting field and third-party pre-shipment inspections of international consignments in strict accordance with ISO/IEC 17020 requirements for maximum regulatory acceptance.</p>
+    </div>
+    <div class="service-card scroll-reveal delay-1">
+      <div class="service-card-num">02 / AUD</div>
+      <div class="service-card-name">ISO 9001 Quality Management Auditing</div>
+      <p class="service-card-desc">Evaluating your internal processes, manufacturing lines, and supply chains against ISO 9001:2015 frameworks to streamline operations and guarantee consistent product output.</p>
+    </div>
+    <div class="service-card scroll-reveal delay-2">
+      <div class="service-card-num">03 / AUD</div>
+      <div class="service-card-name">Product &amp; System Certification Audits</div>
+      <p class="service-card-desc">Performing comprehensive technical evaluations and desktop conformity engineering reviews to clear products across highly diversified industrial and consumer categories.</p>
+    </div>
+  </div>
+</div>
+
+<div id="strategy" class="services-section scroll-reveal">
+  <div class="services-section-title">
+    <div class="cat-icon">📈</div>
+    <div>
+      <div class="cat-title-text">Strategy &amp; Training Services</div>
+      <div class="cat-sub">Market entry engineering and team development</div>
+    </div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card scroll-reveal">
+      <div class="service-card-num">01 / STRAT</div>
+      <div class="service-card-name">Market Entry Feasibility Models</div>
+      <p class="service-card-desc">Developing technical case studies and operational roadmaps for international companies expanding their compliance structures into new commercial regions, such as the Turkish or GCC markets.</p>
+    </div>
+    <div class="service-card scroll-reveal delay-1">
+      <div class="service-card-num">02 / STRAT</div>
+      <div class="service-card-name">Conformity Team Leadership &amp; Mentoring</div>
+      <p class="service-card-desc">Designing custom internal coaching structures and standard operating procedures (SOPs) to upskill technical staff, clear engineering bottlenecks, and optimize team-wide performance.</p>
+    </div>
+    <div class="service-card scroll-reveal delay-2">
+      <div class="service-card-num">03 / STRAT</div>
+      <div class="service-card-name">Risk Assessment &amp; Project Compliance</div>
+      <p class="service-card-desc">Applying structured PMI-RMP® risk frameworks and PMP® project lifecycles to industrial engineering chains, predicting vulnerabilities to keep product pipelines moving on schedule.</p>
+    </div>
+  </div>
+</div>
+
+<div class="services-cta-strip scroll-reveal">
+  <div>
+    <div class="services-cta-heading">Ready to secure your market access?</div>
+    <div class="services-cta-text">Let's discuss your custom certification needs. Whether it is launching a brand or overcoming a complex customs roadblock, let's engineer a solution.</div>
+  </div>
+  <a href="mailto:basel.mech@gmail.com?subject=Service Inquiry" class="services-cta-btn">Start a Conversation →</a>
+</div>
+
+<footer>
+  <div class="footer-name">Basel<span>.</span></div>
+  <div class="footer-copy">© 2026 Basel Kattae — All rights reserved</div>
+</footer>
+
+<script>
+  function scrollToSection(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      const navHeight = 72; 
+      const topOffset = el.getBoundingClientRect().top + window.pageYOffset - navHeight;
+      window.scrollTo({ top: topOffset, behavior: 'smooth' });
+    }
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.05, rootMargin: "0px 0px -50px 0px" });
+
+  document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
