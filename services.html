@@ -8,108 +8,38 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
-<!-- Layout Ratio & Watermark Visibility Overrides -->
-<style>
-  /* Enhance background page watermark readability */
-  .page-watermark {
-    color: rgba(255, 255, 255, 0.07) !important; /* Slightly whiter/more visible */
-    pointer-events: none;
-  }
-
-  /* Responsive Fixes for Even Mobile Display Ratios */
-  @media (max-width: 900px) {
-    .services-hero h1 {
-      font-size: 42px !important;
-    }
-    .services-grid {
-      grid-template-columns: 1fr 1fr !important;
-      gap: 20px !important;
-    }
-  }
-
-  @media (max-width: 600px) {
-    nav {
-      padding: 0 16px !important;
-    }
-    .nav-links {
-      gap: 8px !important;
-    }
-    .nav-btn {
-      padding: 6px 10px !important;
-      font-size: 12px !important;
-    }
-    .nav-cta {
-      display: none !important; /* Prevents button crowding on tiny screens */
-    }
-    .services-hero {
-      padding: 0 16px !important;
-      text-align: center !important;
-    }
-    .services-hero h1 {
-      font-size: 32px !important;
-    }
-    .category-nav {
-      flex-direction: column !important;
-      gap: 8px !important;
-      padding: 0 16px !important;
-    }
-    .cat-btn {
-      width: 100% !important;
-      text-align: center !important;
-    }
-    .services-section {
-      padding: 40px 16px !important;
-    }
-    .services-section-title {
-      flex-direction: column !important;
-      align-items: flex-start !important;
-      gap: 12px !important;
-    }
-    .services-grid {
-      grid-template-columns: 1fr !important;
-      gap: 16px !important;
-    }
-    .services-cta-strip {
-      flex-direction: column !important;
-      gap: 24px !important;
-      text-align: center !important;
-      padding: 40px 16px !important;
-    }
-    .services-cta-btn {
-      width: 100% !important;
-      text-align: center !important;
-    }
-  }
-</style>
 </head>
 <body>
 
+<!-- ── NAV ── -->
 <nav>
-  <a class="nav-logo" href="index.html">Basel<span>.</span></a>
+  <a class="nav-logo" href="Resume.html">Basel<span>.</span></a>
   <div class="nav-links">
-    <a class="nav-btn" href="index.html">Resume</a>
+    <a class="nav-btn" href="Resume.html">Resume</a>
     <a class="nav-btn active" href="services.html">Services</a>
     <a class="nav-btn" href="blog.html">Blog</a>
   </div>
   <a class="nav-cta" href="mailto:basel.mech@gmail.com">Get in Touch</a>
 </nav>
 
+<!-- ── HERO ── -->
 <div class="watermark-container">
-  <div class="page-watermark" style="top: 60px;">Services</div>
+  <div class="page-watermark">Services</div>
 
-  <div class="services-hero scroll-reveal" style="margin-top: var(--nav-h);">
+  <div class="services-hero scroll-reveal">
     <h1>Expert Services<br><span>Built on Precision</span></h1>
     <p>From regulatory certification to hands-on auditing and team training — comprehensive compliance expertise to get your products to market safely and efficiently.</p>
   </div>
 </div>
 
+<!-- ── CATEGORY NAV ── -->
 <div class="category-nav scroll-reveal">
   <button class="cat-btn active" onclick="scrollToSection('regulatory')">Regulatory &amp; Certification</button>
   <button class="cat-btn" onclick="scrollToSection('inspection')">Inspection &amp; Audit</button>
   <button class="cat-btn" onclick="scrollToSection('strategy')">Strategy &amp; Training</button>
 </div>
 
+<!-- ── REGULATORY & CERTIFICATION ── -->
 <div id="regulatory" class="services-section scroll-reveal">
   <div class="services-section-title">
     <div class="cat-icon">🏛️</div>
@@ -129,12 +59,12 @@
       <div class="service-card-name">SASO Compliance Assessment</div>
       <p class="service-card-desc">Comprehensive evaluation of your products against Saudi Arabian Standards Organization (SASO) technical regulations to identify and bridge compliance gaps before customs entry.</p>
     </div>
-    <div class="service-card scroll-reveal">
+    <div class="service-card scroll-reveal delay-2">
       <div class="service-card-num">03 / REG</div>
       <div class="service-card-name">G-Mark Certification (Gulf Countries)</div>
       <p class="service-card-desc">Expert conformity verification for low-voltage electrical equipment and children's toys entering the Gulf region, fully ensuring alignment with GSO technical regulations.</p>
     </div>
-    <div class="service-card scroll-reveal delay-1">
+    <div class="service-card scroll-reveal">
       <div class="service-card-num">04 / REG</div>
       <div class="service-card-name">UAE / MoIAT Market Access</div>
       <p class="service-card-desc">Navigating the regulatory framework for the United Arab Emirates market, helping your business secure mandatory product registrations and compliance approvals through MoIAT.</p>
@@ -142,6 +72,7 @@
   </div>
 </div>
 
+<!-- ── INSPECTION & AUDIT ── -->
 <div id="inspection" class="services-section scroll-reveal">
   <div class="services-section-title">
     <div class="cat-icon">🔍</div>
@@ -169,6 +100,7 @@
   </div>
 </div>
 
+<!-- ── STRATEGY & TRAINING ── -->
 <div id="strategy" class="services-section scroll-reveal">
   <div class="services-section-title">
     <div class="cat-icon">📈</div>
@@ -196,36 +128,55 @@
   </div>
 </div>
 
+<!-- ── CTA STRIP ── -->
 <div class="services-cta-strip scroll-reveal">
   <div>
-    <div class="services-cta-heading">Do you need consultation with related service?</div>
-    <div class="services-cta-text">Let’s discuss your certification needs, from quality assurance and risk verification to team development and professional training services..</div>
+    <div class="services-cta-heading">Ready to secure your market access?</div>
+    <div class="services-cta-text">Let's discuss your custom certification needs. Whether it is launching a brand or overcoming a complex customs roadblock, let's engineer a solution.</div>
   </div>
   <a href="mailto:basel.mech@gmail.com?subject=Service Inquiry" class="services-cta-btn">Start a Conversation →</a>
 </div>
 
+<!-- ── FOOTER ── -->
 <footer>
   <div class="footer-name">Basel<span>.</span></div>
   <div class="footer-copy">© 2026 Basel Kattae — All rights reserved</div>
 </footer>
 
 <script>
+  // Smooth scroll to section with nav offset
   function scrollToSection(id) {
     const el = document.getElementById(id);
-    if (el) {
-      const navHeight = 72; 
-      const topOffset = el.getBoundingClientRect().top + window.pageYOffset - navHeight;
-      window.scrollTo({ top: topOffset, behavior: 'smooth' });
-    }
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.pageYOffset - 80;
+    window.scrollTo({ top, behavior: 'smooth' });
   }
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('visible');
-    });
-  }, { threshold: 0.05, rootMargin: "0px 0px -50px 0px" });
+  // Active category nav highlight on scroll
+  const sections = ['regulatory', 'inspection', 'strategy'];
+  const catBtns = document.querySelectorAll('.cat-btn');
 
-  document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        catBtns.forEach(btn => btn.classList.remove('active'));
+        const idx = sections.indexOf(entry.target.id);
+        if (idx !== -1) catBtns[idx].classList.add('active');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) sectionObserver.observe(el);
+  });
+
+  // Scroll reveal
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.scroll-reveal').forEach(el => revealObserver.observe(el));
 </script>
+
 </body>
 </html>
